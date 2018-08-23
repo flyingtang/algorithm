@@ -1,7 +1,8 @@
 package sort
 
 /**
-快速排序，递归方式
+快速排序
+@Param []int 整形切片
 */
 func QuickSort(arr []int, low, high int) {
 	if low >= high {
@@ -20,6 +21,6 @@ func QuickSort(arr []int, low, high int) {
 		arr[last] = arr[first]
 	}
 	arr[first] = key
-	QuickSort(arr, 0, first)
+	QuickSort(arr, low, first-1)
 	QuickSort(arr, first+1, high)
 }

@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-func TestSelectSort(t *testing.T) {
+func TestMergeSort(t *testing.T) {
 	rand.Seed(time.Now().Unix())
 	arr := make([]int, 100000)
 	for i := 0; i < 100000; i++ {
@@ -14,13 +14,13 @@ func TestSelectSort(t *testing.T) {
 		arr[i] = n
 	}
 
-	// fmt.Printf("select排序前：%v \n", arr)
-	SelectSort(arr)
+	// fmt.Printf("bubble排序前：%v \n", arr)
+	MergeSort(arr)
 
 	//  最好用bce 方式比较两个slice,以下反射不推荐
 	// okRes := []int{0, 1, 1, 2, 2, 3, 3, 4, 5, 5, 6, 6, 8}
-	// fmt.Printf("select排序后：%v \n", arr)
-	// fmt.Printf("select排序后：%v \n", arr)
+	// fmt.Printf("bubble排序后：%v \n", arr)
+	// fmt.Println("len", len(arr))
 	// ok := reflect.DeepEqual(arr, okRes)
 
 	// if ok {
@@ -28,4 +28,5 @@ func TestSelectSort(t *testing.T) {
 	// } else {
 	// 	t.Error("测试失败")
 	// }
+
 }

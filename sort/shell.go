@@ -1,10 +1,8 @@
 package sort
 
-import "fmt"
-
 /**
-希尔排序
-@Param []int
+希尔排序 O(nlogn)
+@Param {[]int} arr
 */
 func ShellSort(arr []int) {
 	length := len(arr)
@@ -15,5 +13,4 @@ func ShellSort(arr []int) {
 			}
 		}
 	}
-	fmt.Println("arr", arr)
 }

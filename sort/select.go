@@ -1,5 +1,9 @@
 package sort
 
+/**
+选择排序 O(n^2)
+@Param []int 整形切片
+*/
 func SelectSort(arr []int) {
 	length := len(arr)
 	for i := 0; i < length-1; i++ {
