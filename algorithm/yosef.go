@@ -10,8 +10,8 @@ import "fmt"
 func F(nums, alive int) {
 	arr := make([]int, nums) // 初始化一个人数为nums的切片
 	const killNum = 3        // 自杀间隔
-	                 // 循环计数
-	counter, pos ,i := 1, -1, 0    // 已经自杀人数, 当前的位置
+	counter, pos ,i := 1, -1, 0    // 已经自杀人数, 当前的位置 循环计数
+	
 	for counter <= nums {
 		for {
 			pos = (pos + 1) % nums
